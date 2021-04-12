@@ -1,12 +1,13 @@
 import React from "react";
 import { render } from "react-dom";
+import theme from "./theme";
+import { ThemeProvider } from "@material-ui/core";
 
 const App = () => {
+  const classes = useStyle();
   return (
     <div>
-      <h2 className="max-w-md mx-auto text-poll-red text-center font-bold text-4xl">
-        Hello Friend, <span className="text-poll-blue">Bonsoir :)</span>
-        </h2>
+      <ThemeProvider theme={theme}></ThemeProvider>
     </div>
   );
 };
